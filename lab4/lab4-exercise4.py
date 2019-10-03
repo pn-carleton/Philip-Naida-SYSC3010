@@ -9,12 +9,10 @@ dbconnect = sqlite3.connect("michaeldb.db")
 dbconnect.row_factory = sqlite3.Row
 
 cursor = dbconnect.cursor()
-
 for i in range(10):
     id += 1
     temperature += 1.1
     cursor.execute('''insert into temperature values (?, ?, ?)''', (id, temperature, date))
-
 
 dbconnect.commit()
 cursor.execute('SELECT * FROM temperature')
@@ -29,8 +27,6 @@ cursor.execute('''insert into kitchen values (4, 'motion', 'garage')''')
 cursor.execute('''insert into kitchen values (5, 'temperature', 'garage')''')
 
 dbconnect.commit()
-
-
 cursor.execute('SELECT * FROM kitchen WHERE zone="kitchen"')
 
 for row in cursor:

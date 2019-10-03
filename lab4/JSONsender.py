@@ -19,3 +19,4 @@ for i in range(0, 10):
     dump = json.dumps(x)
     s.sendto(dump.encode('utf-8'), server_address)
     age += 1
+

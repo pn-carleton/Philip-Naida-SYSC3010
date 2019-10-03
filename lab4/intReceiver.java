@@ -3,7 +3,7 @@ import java.net.*;
 import java.io.*;
 import java.nio.*;
 
-public class UDPReceiver {
+public class intReceiver {
 
 	private final static int PACKETSIZE = 100 ;
 
@@ -23,7 +23,7 @@ public class UDPReceiver {
 	         // Construct the socket
 	         DatagramSocket socket = new DatagramSocket( port ) ;
 
-	         for( ;; )
+	         for( int i = 0;i < 10; i++)
 	         {
 		        System.out.println( "Receiving on port " + port ) ;
 		        DatagramPacket packet = new DatagramPacket( new byte[PACKETSIZE], PACKETSIZE ) ;

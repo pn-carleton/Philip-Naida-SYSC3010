@@ -4,28 +4,25 @@ import java.util.*;
 import java.io.*;
 import java.nio.*;
 
-public class UDPSender {
+public class intSender {
 private final static int PACKETSIZE = 100 ;
 	public static void main(String[] args) 
    {
 	      // Check the arguments
-	      if( args.length != 3 )
+	      if( args.length != 2 )
 	      {
 	         System.out.println( "usage: java UDPSender host port" ) ;
 	         return ;
 	      }
 	      DatagramSocket socket = null ;
-              DatagramSocket echoSocket = null ;
 	      try
 	      {
 	         // Convert the arguments first, to ensure that they are valid
 	         InetAddress host = InetAddress.getByName( args[0] ) ;
 	         int port         = Integer.parseInt( args[1] ) ;
-		 int numSends     = Integer.parseInt( args[2] );
 	         socket = new DatagramSocket() ;
-                 echoSocket = new DatagramSocket(1001);
      
-	       	 for(int i = 0; i < numSends; i++) {
+	       	 for(int i = 0; i < 10; i++) {
 		     Random rand = new Random();
 	             int n = rand.nextInt(101);
 		     ByteBuffer buf = ByteBuffer.allocate(10);

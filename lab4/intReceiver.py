@@ -18,4 +18,3 @@ for i in range(0,10):
         break
     print ("Received %s bytes from %s %s: " % (len(buf), address, buf ))
 
-s.shutdown(1)
