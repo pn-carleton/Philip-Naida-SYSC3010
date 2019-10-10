@@ -9,15 +9,15 @@
     tools:showIn="@layout/activity_main">
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editText"
         android:layout_width="213dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="@string/edit_message"
         android:inputType="textPersonName"
-        android:text="@string/edit_message"
         app:layout_constraintEnd_toStartOf="@+id/button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,9 +29,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+        android:onClick="sendMessage"
         android:text="@string/button_send"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editText3"
+        app:layout_constraintStart_toEndOf="@+id/editText"
         tools:layout_editor_absoluteY="13dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
